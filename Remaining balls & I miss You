@@ -1,0 +1,33 @@
+//Remaining Balls
+#include<iostream>
+using namespace std;
+
+int main(){
+ string S,T,U;
+ int A,B;
+ cin>>S>>T>>A>>B>>U;
+ if(S==U)
+   A--;
+  else
+    B--;
+  cout<<A<<" "<<B<<endl;
+}
+---------------------------------------------------
+//I miss You
+#include<iostream>
+#include<string>
+using namespace std;
+
+int main(){
+
+  char s[100];
+  cin>>s;
+  int i;
+  for(i = 0; s[i]; i++){
+     s[i] = 'x';
+  }
+
+cout<< s;
+
+return 0;
+}
