@@ -1,0 +1,16 @@
+vector<string> split_string(string);
+
+// Complete the countArray function below.
+long countArray(int n, int k, int x) {
+    // Return the number of ways to fill in the array.
+    vector<long long>b(n),a(n);
+    a[0]=0; //ends in x
+    b[0]=1; // doesn't end in x
+    for(int i=1;i<n;++i){
+        a[i]=b[i-1];
+        b[i]=a[i-1]*(k-1)+b[i-1]*(k-2);
+    }
+
+    return a[n-1]; 
+
+}
